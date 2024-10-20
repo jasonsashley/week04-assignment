@@ -140,10 +140,23 @@ public class Main {
 		System.out.print("doubles2 array: ");
 		printArray(doubles2);
 		System.out.println("Does doubles have a larger average than doubles2? " + isAverageGreater(doubles, doubles2));
+
+		// 12
+		// Passing a boolean and a double to a method to check if conditions are right
+		// to buy a drink
+		double money = 10.9;
+		System.out.println("\n12:::");
+		System.out.println("Will we buy a drink if it's hot and we have $" + money + "? " + willBuyDrink(true, money));
+		System.out.println(
+				"Will we buy a drink if it's NOT hot and we have $" + money + "? " + willBuyDrink(false, money));
+
+		System.out.println("\n13:::");
+		System.out.println(
+				"Every array that was printed here was formatted with three custom methods I passed the arrays to (one for each of the used data types), instead of manually looping through them every time.");
 	}
 
-	// 1.a & 1.b - Method to subtract the value of the first element from the last.
-	// Works for any valid array length
+	// 1
+	// Method to subtract the value of the first element from the last.
 	public static void subtractFirstFromLast(int[] array) {
 		if (array.length > 0) {
 			array[array.length - 1] -= array[0];
@@ -151,6 +164,7 @@ public class Main {
 		return;
 	}
 
+	// 13
 	// Method to print the elements in an int array to the console.
 	public static void printArray(int[] array) {
 		for (int num : array) {
@@ -160,6 +174,7 @@ public class Main {
 		return;
 	}
 
+	// 13
 	// Overloading the printArray method, so it works for String arrays as well.
 	public static void printArray(String[] array) {
 		for (String word : array) {
@@ -169,6 +184,7 @@ public class Main {
 		return;
 	}
 
+	// 13
 	// Overloading the printArray method, so it works for double arrays as well.
 	public static void printArray(double[] array) {
 		for (double num : array) {
@@ -232,6 +248,13 @@ public class Main {
 			sum2 += num;
 		}
 		return (sum1 / first.length) > (sum2 / second.length);
+	}
+
+	// 12
+	// Takes a boolean and a double to check whether conditions are right to buy a
+	// drink
+	public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
+		return isHotOutside && (moneyInPocket > 10.5);
 	}
 
 }
