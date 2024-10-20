@@ -32,7 +32,7 @@ public class Main {
 		subtractFirstFromLast(ages2);
 		printArray(ages2);
 
-		int[] test = { 10, 2 };
+		int[] test = { 10, -2 };
 		subtractFirstFromLast(test);
 		printArray(test);
 
@@ -61,9 +61,10 @@ public class Main {
 		// 2.b
 		// Looping through the names array to create a new String with all the elements
 		// separated by a space & then printing it out
-		String concat = "";
+		StringBuilder concat = new StringBuilder();
+
 		for (String name : names) {
-			concat += name + " ";
+			concat.append(name + " ");
 		}
 		System.out.println("\n2.b:::");
 		System.out.println(concat);
